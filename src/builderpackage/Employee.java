@@ -1,11 +1,10 @@
 package builderpackage;
 
-public class Employee 
-{
+public class Employee {
    private String lastName;
    private String middleName;
-   private String firstName;
-   private long id;
+   private String firstName; // OBLIGATORIO
+   private long id; // OBLIGATORIO
    private int birthYear;
    private int birthMonth;
    private int birthDate;
@@ -24,7 +23,7 @@ public class Employee
       final int newHireYear,
       final int newHireMonth,
       final int newHireDate)
-   {
+    {
       this.lastName = newLastName;
       this.middleName = newMiddleName;
       this.firstName = newFirstName;
@@ -35,5 +34,11 @@ public class Employee
       this.hireYear = newHireYear;
       this.hireMonth = newHireMonth;
       this.hireDate = newHireDate;
-   }
+    }
+    
+    // Añado toString en la clase para comprobar los objetos creados
+    @Override
+    public String toString() {
+        return "Employee{" + "lastName=" + lastName + ", middleName=" + middleName + ", firstName=" + firstName + ", id=" + id + ", birthYear=" + birthYear + ", birthMonth=" + birthMonth + ", birthDate=" + birthDate + ", hireYear=" + hireYear + ", hireMonth=" + hireMonth + ", hireDate=" + hireDate + '}';
+    }
 }
