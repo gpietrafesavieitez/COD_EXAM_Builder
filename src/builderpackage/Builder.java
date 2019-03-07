@@ -6,7 +6,7 @@
 
 package builderpackage;
 
-// Se puede codificar manualmente o automaticamente desde el constructor de la clase mediante Refactor 
+// Se puede codificar manualmente o automaticamente desde el constructor mediante Refactor 
 public class Builder {
     
     private String lastName;
@@ -20,7 +20,11 @@ public class Builder {
     private int hireMonth;
     private int hireDate;
     
-    // Se especifican los parametros obligatorios en el Constructor
+    /**     Se especifican los parametros OBLIGATORIOS en el Constructor, en el caso de que no existan podemos 
+    *       crear un Constructor vacio para luego ir añadiendo parametros segun necesitemos. Tambien se pueden
+    *       inicializar los parametros que consideremos oportunos para que obtengan un valor por defecto.
+    * */
+    
     public Builder(String firstName, long id){
         this.firstName = firstName;
         this.id = id;
